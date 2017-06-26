@@ -42,17 +42,9 @@ export default class App extends Component {
 
     return (
       <div style={styles.container}>
-        <Title>
-          To-Do List
-        </Title>
-        <Input
-          placeholder={'Type a todo, then hit enter!'}
-          onSubmitEditing={this.onAddTodo}
-        />
-        <List
-          list={todos}
-          onClickItem={this.onRemoveTodo}
-        />
+        <Title>Todux</Title>
+        <Input placeholder={'Type a todux, then hit enter!'} onSubmitEditing={this.onAddTodo}/>
+        <List list={todos} onClickItem={this.onRemoveTodo}/>
       </div>
     )
   }
