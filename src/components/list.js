@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 
 export default class List extends Component {
   renderItem = (text, i) => {
-    const { onClickItem } = this.props;
+    const {onClickItem} = this.props;
 
     return (
       <div key={i} style={styles.item} onClick={() => onClickItem(i)}>
@@ -12,7 +12,7 @@ export default class List extends Component {
   };
 
   render() {
-    const { list } = this.props;
+    const {list} = this.props;
 
     return (
       <div style={styles.container}>

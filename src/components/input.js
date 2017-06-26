@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 
 export default class Input extends Component {
   state = {
@@ -6,24 +6,24 @@ export default class Input extends Component {
   };
 
   handleChange = e => {
-    this.setState({ value: e.target.value });
+    this.setState({value: e.target.value});
   };
 
   handleKeyPress = e => {
     if (e.key !== "Enter") return;
 
-    const { onSubmitEditing } = this.props;
-    const { value } = this.state;
+    const {onSubmitEditing} = this.props;
+    const {value} = this.state;
 
     if (!value) return; // Don't submit if empty
 
     onSubmitEditing(value);
-    this.setState({ value: "" });
+    this.setState({value: ""});
   };
 
   render() {
-    const { placeholder } = this.props;
-    const { value } = this.state;
+    const {placeholder} = this.props;
+    const {value} = this.state;
 
     return (
       <input

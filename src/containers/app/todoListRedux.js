@@ -7,10 +7,10 @@ export const types = {
 // Helper functions to dispatch actions, optionally with payloads
 export const actionCreators = {
   add: item => {
-    return { type: types.ADD, payload: item };
+    return {type: types.ADD, payload: item};
   },
   remove: index => {
-    return { type: types.REMOVE, payload: index };
+    return {type: types.REMOVE, payload: index};
   }
 };
 
@@ -28,8 +28,8 @@ const initialState = {
 //   return the initial state of the app in this case.
 
 export const reducer = (state = initialState, action) => {
-  const { todos } = state;
-  const { type, payload } = action;
+  const {todos} = state;
+  const {type, payload} = action;
 
   switch (type) {
     case types.ADD: {

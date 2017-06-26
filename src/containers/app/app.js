@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-import { actionCreators } from './todoListRedux'
+import {actionCreators} from './todoListRedux'
 import List from '../../components/list'
 import Input from '../../components/input'
 import Title from '../../components/title'
