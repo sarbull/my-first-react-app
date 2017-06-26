@@ -7,16 +7,16 @@ import Title from '../../components/title'
 
 export default class App extends Component {
 
-  state = {}
+  state = {};
 
   componentWillMount() {
-    const {store} = this.props
+    const {store} = this.props;
 
-    const {todos} = store.getState()
-    this.setState({todos})
+    const {todos} = store.getState();
+    this.setState({todos});
 
     this.unsubscribe = store.subscribe(() => {
-      const {todos} = store.getState()
+      const {todos} = store.getState();
       this.setState({todos})
     })
   }
@@ -26,19 +26,19 @@ export default class App extends Component {
   }
 
   onAddTodo = (text) => {
-    const {store} = this.props
+    const {store} = this.props;
 
     store.dispatch(actionCreators.add(text))
-  }
+  };
 
   onRemoveTodo = (index) => {
-    const {store} = this.props
+    const {store} = this.props;
 
     store.dispatch(actionCreators.remove(index))
-  }
+  };
 
   render() {
-    const {todos} = this.state
+    const {todos} = this.state;
 
     return (
       <div style={styles.container}>
@@ -63,4 +63,4 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
   }
-}
+};
